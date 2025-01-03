@@ -1,10 +1,10 @@
 services:
-  insultbot:
+  code_bot:
     build: .
-    container_name: insultbot
+    container_name: code_bot
     restart: unless-stopped
     env_file:
      - .env
-    # volumes:
-    #   - ./usage_data:/app/data
+    volumes:
+      - ./usage_data:/app/data
     command: python3 code_bot.py

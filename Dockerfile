@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Install the Python dependencies
-RUN pip install --no-cache-dir slack-bolt
+RUN pip install --no-cache-dir python-dotenv pyotp slack-bolt
 
 # Run the Python script
 CMD ["python", "code_bot.py"]
