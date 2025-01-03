@@ -1,0 +1,10 @@
+services:
+  insultbot:
+    build: .
+    container_name: insultbot
+    restart: unless-stopped
+    env_file:
+     - .env
+    # volumes:
+    #   - ./usage_data:/app/data
+    command: python3 code_bot.py
